@@ -1,0 +1,40 @@
+{
+  "name": "nodejs-rest-api-boilerplate",
+  "version": "1.0.0",
+  "description": "Modern Node.js API with TypeScript, ESLint and Prettier",
+  "main": "dist/app.js",
+  "scripts": {
+    "dev": "nodemon --exec ts-node src/app.ts",
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "format": "prettier --write src/**/*.{ts,js,json}",
+    "format:check": "prettier --check src/**/*.{ts,js,json}",
+    "type-check": "tsc --noEmit",
+    "db:generate": "npx prisma generate",
+    "db:push": "npx prisma db push",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf package-lock.json && rm -rf node_modules && rm -rf dist"
+  },
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "api",
+    "express"
+  ],
+  "author": "Beezsoft Software Co.",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.0",
+    "eslint": "^9.35.0",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
